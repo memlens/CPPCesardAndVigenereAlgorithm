@@ -1,0 +1,87 @@
+# Projet de Chiffrement - César et Vigenère
+
+## Description
+
+Ce projet implémente deux méthodes de chiffrement classiques : **César** et **Vigenère**. 
+- **César** : Un chiffrement par substitution où chaque lettre du texte en clair est remplacée par une lettre située un certain nombre de positions plus loin dans l'alphabet.
+- **Vigenère** : Une méthode de chiffrement par substitution poly-alphabétique où une clé de plusieurs lettres est utilisée pour déterminer le décalage pour chaque lettre du texte en clair.
+
+## Structure du Projet
+
+Le projet est structuré en plusieurs fichiers pour faciliter la maintenance et l'extension :
+
+- `cesard.hpp` : Définition de la classe `Crypt` pour le chiffrement de César.
+- `cesard.cpp` : Implémentation de la classe `Crypt`.
+- `vigenere.hpp` : Définition de la classe `Vigenere`, héritant de `Crypt`, pour le chiffrement de Vigenère.
+- `vigenere.cpp` : Implémentation de la classe `Vigenere`.
+- `main.cpp` : Point d'entrée principal du programme, démontrant l'utilisation des deux méthodes de chiffrement.
+
+## Compilation
+
+Pour compiler le projet, utilise le `Makefile` fourni. Assure-toi d'avoir `make` et `g++` installés sur ton système.
+
+### Instructions de Compilation
+
+1. **Cloner le Répertoire**
+    Sous linux et windows disposant de mingw avec mingw enregistré dans le path
+   ```bash
+   git clone https://github.com/memlens/CPPCesardAndVigenereAlgorithm.git
+   cd CPPCesardAndVigenereAlgorithm
+   ouvre ton terminal dans le repertoire et tape :
+   make #Pour la compilation
+   ./prog #Pour executer le programme
+   ```
+
+2. **Exemple**
+    ```bash
+    ❯ ./prog
+    ****** Menu ****
+    1.Chiffrement de Cesard
+    2.Chiffrement de Vigenere
+    3.Quitter
+    	 >1
+    1.Chiffrer
+    2.Dechiffrer
+    	 >1
+    Welcome This is a simple Caesar cipher based on the ASCII table.
+    Please enter some content for encryption:
+    	Je t'aime
+    Now enter the shift value you desire:
+    	5
+    Oj y'fnrj
+    Je t'aime
+    ****** Menu ****
+    1.Chiffrement de Cesard
+    2.Chiffrement de Vigenere
+    3.Quitter
+    	 >3
+    Bye Bye o_0 !
+    ```
+
+    ```bash
+    ❯ ./prog
+    ****** Menu ****
+    1.Chiffrement de Cesard
+    2.Chiffrement de Vigenere
+    3.Quitter
+    	 >2
+    1.Chiffrer
+    2.Dechiffrer
+    	 >1                                    
+    Welcome This is a Vigenere cipher.
+    Please enter some content for encryption:
+    	Je suis un grand paresseux
+    Now enter the key you desire:
+    	moi
+    Vs eiqe cz odovp xmfmegmgl
+    Je suis un grand paresseux
+    ****** Menu ****
+    1.Chiffrement de Cesard
+    2.Chiffrement de Vigenere
+    3.Quitter
+    	 >3
+    Bye Bye o_0 !
+
+    ```
+
+
