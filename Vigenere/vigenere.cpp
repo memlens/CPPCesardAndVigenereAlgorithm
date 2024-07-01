@@ -12,7 +12,7 @@ void Vigenere::introduction() {
 
 void Vigenere::encrypt() {
     int keyLength = key.size();
-    for (int i = 0; i < chainToCrypt.size(); i++) {
+    for (size_t i = 0; i < chainToCrypt.size(); i++) {
         int shift = (key[i % keyLength] - 'a');
         chainToCrypt[i] = encryptCharacter(chainToCrypt[i], shift);
     }
@@ -20,7 +20,7 @@ void Vigenere::encrypt() {
 
 void Vigenere::decrypt() {
     int keyLength = key.size();
-    for (int i = 0; i < chainToCrypt.size(); i++) {
+    for (size_t i = 0; i < chainToCrypt.size(); i++) {
         int shift = (key[i % keyLength] - 'a');
         chainToCrypt[i] = decryptCharacter(chainToCrypt[i], shift);
     }
